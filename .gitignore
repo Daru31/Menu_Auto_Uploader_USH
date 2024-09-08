@@ -1,0 +1,4 @@
+.venv 
+session.json
+__pycache__
+test 
