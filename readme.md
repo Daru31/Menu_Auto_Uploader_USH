@@ -1,6 +1,6 @@
 # Menu_Auto_Uploader (USH)
 
-Menu_Auto_Uploader is a <mark>script</mark> that crawls same-day meal information within the school's official website and uploads it to Instagram stories. 
+Menu_Auto_Uploader is a <mark>script</mark> that crawls same-day meal information within [My school's official website](https://school.use.go.kr/ulsan-hs-h/M01030702/) and uploads it to Instagram stories. 
 In the past, in my school's student council, a person captured and uploaded photos from websites, but to eliminate the hassle, I wrote these scripts to automate.
 
 ## How to use:
