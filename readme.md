@@ -8,7 +8,7 @@ In the past, in my school's student council, a person captured and uploaded phot
 1. clone repository.
 
 ```shell
-git clone https://github.com/Daru31/USH-menu-auto-uploader.git
+git clone https://github.com/Daru31/Menu_Auto_Uploader_USH.git
 ```
 
 2. Install required modules to run code. 
