@@ -4,6 +4,8 @@ from pytesseract import * # pip install pytesseract
 import os 
 from instagrapi import Client # pip install instagrapi 
 import datetime 
+# USERNAME, PASSWORD : 인스타 사용자명, 비밀번호 
+# current_directory : 레포지토리 경로 
 
 class lunchstory: 
     
@@ -17,14 +19,14 @@ class lunchstory:
                 png = driver.get_screenshot_as_png() 
                 open('lunch_screen'+str(i)+'.png', 'wb').write(png) 
 
-        im = Image.open("current_directory/lunch_screen1200.png") # 경로 변경 필요
-        left = 250 # 감소 = 왼쪽으로 확장
-        top = 70 # 감소 = 위로 확장
-        right = 380 # 증가 = 오른쪽으로 확장
-        bottom = 480 # 증가 = 아래로 확장
+        im = Image.open("current_directory/lunch_screen1200.png") 
+        left = 250 # 감소 = 왼쪽으로 확장 
+        right = 380 # 증가 = 오른쪽으로 확장 
+        top = 70 # 감소 = 위로 확장 
+        bottom = 480 # 증가 = 아래로 확장 
 
         im1 = im.crop((left, top, left + right, top + bottom)) 
-        imgpath = "current_directory/crop_screen.png" # 경로 변경 필요 
+        imgpath = "current_directory/crop_screen.png"  
         im1.save(imgpath)  
         
     def no_capture(self): 
@@ -35,10 +37,10 @@ class lunchstory:
         bottom = 150 # 증가 = 아래로 확장 
         
         im1 = im.crop((left, top, left + right, top + bottom)) 
-        imgpath = "current_directory/crop_exception.png" # 경로 변경 필요 
+        imgpath = "current_directory/crop_exception.png" 
         im1.save(imgpath) 
         
-        image = Image.open(imgpath) # sample.txt 만듦 
+        image = Image.open(imgpath) # sample.txt 생성 
         text = image_to_string(image, lang="kor") 
 
         with open("sample.txt", "w", encoding="utf8") as img: 
@@ -65,28 +67,27 @@ class lunchstory:
                 bottom = 250 # 증가 = 아래로 확장
 
                 im1 = im.crop((left, top, left + right, top + bottom)) 
-                imgpath = "current_directory/crop_screen.png" # 경로 변경 필요 
+                imgpath = "current_directory/crop_screen.png" 
                 im1.save(imgpath) 
                 
             else: 
                 print("lunch & dinner ") 
-        # quit() 
         
     def login_upload(self): 
         cl = Client()
         cl.delay_range = [1,3]
         cl.load_settings("session.json") 
         cl.delay_range = [1,3]
-        cl.login('USERNAME', 'PASSWORD') # 아이디, 비번 입력 
+        cl.login('USERNAME', 'PASSWORD')  
         cl.delay_range = [1,3]
         cl.get_timeline_feed() 
         cl.delay_range = [1,3]
 
-        cl.photo_upload_to_story('current_directory/crop_screen.png') # 경로 변경 필요 
+        cl.photo_upload_to_story('current_directory/crop_screen.png') 
         cl.delay_range = [1,3] 
     
     def timecheck(self): 
-        print("System worked perfectly at:", datetime.datetime.now()) 
+        print("Task completed at:", datetime.datetime.now()) 
         
         
 run = lunchstory() 
