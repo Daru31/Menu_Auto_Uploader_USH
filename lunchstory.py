@@ -1,8 +1,8 @@
-from selenium import webdriver # pip install selenium 
-from PIL import Image # pip install pillow 
-from pytesseract import * # pip install pytesseract 
+from selenium import webdriver  
+from PIL import Image 
+from pytesseract import * 
 import os 
-from instagrapi import Client # pip install instagrapi 
+from instagrapi import Client 
 import datetime 
 # USERNAME, PASSWORD : 인스타 사용자명, 비밀번호 
 # current_directory : 레포지토리 경로 
@@ -51,7 +51,7 @@ class lunchstory:
         def contains_str(file_path): 
             with open(file_path, 'r', encoding='utf8') as file: 
                 content = file.read() 
-                return '알레르기 정보' in content 
+                return '원산지', '알레르기 정보' in content 
 
         if os.path.exists(file_path): 
             if os.path.getsize(file_path) == 0: 
