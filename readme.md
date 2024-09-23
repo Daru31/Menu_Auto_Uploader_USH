@@ -25,7 +25,7 @@ pip install -r requirements.txt
 python setup.py 
 ```
 
-5. Run <mark>lunchstory.py</mark> to upload now. 
+5. Run <mark>lunchstory.py</mark> to upload immediatly. 
 
 ```shell 
 python lunchstory.py 
