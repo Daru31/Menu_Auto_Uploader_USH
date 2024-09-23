@@ -51,7 +51,10 @@ class lunchstory:
         def contains_str(file_path): 
             with open(file_path, 'r', encoding='utf8') as file: 
                 content = file.read() 
-                return '원산지', '알레르기 정보' in content 
+                return '원산지' in content 
+            with open(file_path, 'r', encoding='utf8') as file: 
+                content = file.read() 
+                return '알레르기 정보' in content 
 
         if os.path.exists(file_path): 
             if os.path.getsize(file_path) == 0: 
