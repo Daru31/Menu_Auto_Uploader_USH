@@ -21,7 +21,7 @@ class lunchstory:
 
         im = Image.open("current_directory/lunch_screen1200.png") 
         left = 250 # 감소 = 왼쪽으로 확장 
-        right = 380 # 증가 = 오른쪽으로 확장 
+        right = 300 # 증가 = 오른쪽으로 확장 
         top = 70 # 감소 = 위로 확장 
         bottom = 480 # 증가 = 아래로 확장 
 
@@ -51,10 +51,10 @@ class lunchstory:
         def contains_str(file_path): 
             with open(file_path, 'r', encoding='utf8') as file: 
                 content = file.read() 
-                return '원산지' in content 
+                return '알레르기' in content 
             with open(file_path, 'r', encoding='utf8') as file: 
                 content = file.read() 
-                return '알레르기 정보' in content 
+                return '원산지' in content 
 
         if os.path.exists(file_path): 
             if os.path.getsize(file_path) == 0: 
@@ -65,9 +65,9 @@ class lunchstory:
                 print("only lunch today. ")
                 im = Image.open("current_directory/lunch_screen1200.png") 
                 left = 250 # 감소 = 왼쪽으로 확장
-                right = 380 # 증가 = 오른쪽으로 확장
-                top = 70 # 감소 = 위로 확장
-                bottom = 250 # 증가 = 아래로 확장
+                right = 300 # 증가 = 오른쪽으로 확장
+                top = 60 # 감소 = 위로 확장
+                bottom = 280 # 증가 = 아래로 확장
 
                 im1 = im.crop((left, top, left + right, top + bottom)) 
                 imgpath = "current_directory/crop_screen.png" 
