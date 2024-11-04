@@ -30,9 +30,3 @@ python setup.py
 ```shell 
 python lunchstory.py 
 ```
-
-6. If you want to schedule to run every 12:00 AM, Run <mark>repeat.py</mark> instead.  
-
-```shell
-python repeat.py 
-```
