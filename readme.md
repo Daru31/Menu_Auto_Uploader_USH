@@ -1,6 +1,6 @@
 # Menu_on_Instagram 
 
-Menu_Auto_Uploader is a <mark>script</mark> that crawls same-day meal information within [My school's official website](https://school.use.go.kr/ulsan-hs-h/M01030702/) and uploads it to Instagram stories. 
+Menu_on_Instagram is a <mark>script</mark> that crawls same-day meal information within [My school's official website](https://school.use.go.kr/ulsan-hs-h/M01030702/) and uploads it to Instagram stories. 
 In the past, in my school's student council, a person captured and uploaded photos from websites, but to eliminate the hassle, I wrote these scripts to automate.
 
 ## How to use:
@@ -8,7 +8,7 @@ In the past, in my school's student council, a person captured and uploaded phot
 1. clone repository.
 
 ```shell
-git clone https://github.com/Daru31/Menu_Auto_Uploader_USH.git
+git clone https://github.com/Daru31/Menu_on_Instagram.git
 ```
 
 2. Install required modules to run code. 
